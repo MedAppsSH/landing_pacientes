@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedPal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="global_container">
+        <!-- <div class="next">
+        <div class="arrow"></div>
+    </div> -->
+        <!-- hero -->
+        <div class="hero">
+            <div class="slide1">
+                <div class="slide1-1">
+                    <div id="logo"></div>
+                </div>
+
+                <div class="slide1-2">
+                    <div class="lottie">
+                        <lottie-player src="./src/hero.json" background="transparent" speed="1" style="width: auto; height: 45vh;" loop autoplay></lottie-player>
+                    </div>
+                    <div class="title1">
+                        <h2>Nunca ha sido más fácil acceder a un servicio de Salud o Belleza</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- second_page -->
+        <div class="directory_page">
+            <div class="slide2">
+                <div class="slide2-1">
+                    <div class="directory-text">
+                        <div class="title2">
+                            <h1>Los mejores profesionales</h1>
+                        </div>
+                        <div class="description_directory">
+                            <h2>Encuentra en nuestro directorio a los mejores profesionales de la región, además de otros servicios de salud, belleza y cuidado</h2>
+                            <br>
+                            <h2>Encuentralos principalmente en:</h2>
+                        </div>
+                        <div class="establecimientos">
+                            <div id="santaines"></div>
+                            <div id="montesinai"></div>
+                            <div id="latino"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide2-2">
+                    <lottie-player src="./src/doctors.json" background="transparent" speed="1.5" style="width: 40vw; height: auto;" loop autoplay></lottie-player>
+                </div>
+            </div>
+        </div>
+        <!-- third_page -->
+        <div class="discount_page">
+            <div class="slide3">
+                <div class="slide3-1">
+                    <div id="discount_icon">
+                    </div>
+                    <div class="description_discount">
+                        <h2>Reserva citas o inscríbete a diferentes servicios de salud, belleza y cuidado y obtén fabulosos descuentos en tus consultas y otros servicios de salud y belleza</h2>
+                    </div>
+                    <div class="title3">
+                        <h1>Descuentos</h1>
+                    </div>
+                </div>
+
+                <div id="slide3-2">
+                    <div class="lottie">
+                        <lottie-player src="./src/paying_medical_service.json" background="transparent" speed="1" style="width: auto; height: 50vh;" loop autoplay></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fourth_page -->
+        <div class="specialties_page">
+            <div class="slide4">
+                <div class="slide4-1">
+                    <div id="speciality1">
+                        <lottie-player src="./src/dermatology.json" background="transparent" speed="1.5" style="width: 20vw; height: auto;" loop autoplay></lottie-player>
+                    </div>
+                    <div id="speciality2">
+                        <lottie-player src="./src/dentist.json" background="transparent" speed="1.5" style="width: 20vw; height: auto;" loop autoplay></lottie-player>
+                    </div>
+                    <div id="speciality3">
+                        <lottie-player src="./src/allergist.json" background="transparent" speed="1.5" style="width: 20vw; height: auto;" loop autoplay></lottie-player>
+                    </div>
+
+                </div>
+                <div class="slide4-2">
+                    <div class="specialties-text">
+                        <div class="description_directory">
+                            <h2>En nuestro directorio encontrarás la especialidad que estás buscando</h2>
+                        </div>
+                        <div class="title3">
+                            <h1>Especialidades</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- fifth_page -->
+        <div class="download_page">
+            <div class="slide5">
+                <div class="slide5-1">
+                    <div class="download-text">
+                        <div class="title3">
+                            <h1>Descargalo ahora</h1>
+                        </div>
+                        <div class="description_download">
+                            <h2>Descarga nuestra aplicación para IOS y Android, ¡totalmente gratis!</h2>
+                        </div>
+                    </div>
+                    <div class="dowload_buttons">
+                        <div class="button-android">GooglePlay</div>
+                        <div class="button-ios">AppStore</div>
+                    </div>
+                </div>
+                <div class="slide5-2">
+                    <div class="i-advapp-cel">
+                        <div class="i-advapp-cel-screen"></div>
+                        <div class="i-advapp-cel-screen2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- foot_page -->
+        <div class="footer">
+            <h2>Sobre nosotros</h2>
+            <h2>Servicios para médicos</h2>
+            <h2>Descargar la aplicación</h2>
+            <h2>Términos y condiciones</h2>
+            <h1>Gracias por tu visita</h1>
+            <lottie-player src="./src/people_smartphone.json" background="transparent" speed="1.5" style="width: 35vw; height: auto;" loop autoplay></lottie-player>
+            <div id="logo_footer"></div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/script.js"></script>
+</html>

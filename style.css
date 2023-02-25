@@ -1,0 +1,583 @@
+:root {
+    --color1: #3177b9;
+    --color2: #efdb26;
+    --color3: #00c5b4;
+    --color4: #19a8bf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+h1 {
+    font-family: 'Nothing You Could Do', cursive;
+    color: var(--color2);
+    line-height: 75px;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color1);
+    line-height: 35px;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#global_container {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    #global_container {
+        scroll-snap-type: x mandatory;
+    }
+}
+
+#global_container>* {
+    scroll-snap-align: center;
+}
+
+.next {
+    background-color: white;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    right: 0;
+    top: 45%;
+    padding: 10px 0;
+    box-shadow: 10px 10px 30px black;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    animation-name: over_arrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes over_arrow {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.arrow {
+    -webkit-mask: url(./src/arrow.svg) no-repeat 100% 100%;
+    background-color: var(--color1);
+    height: 100%;
+    width: 100%;
+}
+
+.hero {
+    background-color: var(--color1);
+    background-image: url("./src/hero_background.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide1 {
+    width: 70vw;
+    height: 70vh;
+    background-color: white;
+    box-shadow: 10px 10px 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide1 .slide1-1 {
+    display: block;
+    background-color: var(--color1);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    background-image: url("./src/logo.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 50%;
+}
+
+.slide1 .slide1-2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title1 {
+    max-width: 75%;
+    padding: 35px;
+    text-align: center;
+}
+
+.directory_page {
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide2 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide2-1 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide2-2 {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./src/circulo.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(5px 5px 10px #444);
+}
+
+.directory-text {
+    max-width: 75%;
+}
+
+.title2 {
+    padding: 35px 0;
+    text-align: left;
+}
+
+.establecimientos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 35vh;
+}
+
+#santaines {
+    background-image: url('./src/iconos_instituciones/santaines.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    margin-top: 35px;
+}
+
+#montesinai {
+    background-image: url('./src/iconos_instituciones/montesinai.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    margin-top: 35px;
+}
+
+#latino {
+    background-image: url('./src/iconos_instituciones/latino.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 120%;
+    margin-top: 35px;
+}
+
+.discount_page {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./src/discount_background.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide3 {
+    width: 70vw;
+    height: 70vh;
+    background-color: white;
+    box-shadow: 10px 10px 20px #444;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 60% 40%;
+}
+
+.slide3-1 {
+    display: block;
+    background-color: var(--color1);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#discount_icon {
+    background-image: url("./src/discount.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10rem;
+    height: 10rem;
+}
+
+.slide3-2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description_discount {
+    padding-top: 50px;
+    max-width: 75%;
+}
+
+.description_discount h2 {
+    color: white;
+}
+
+.title3 h1 {
+    padding: 15px 0;
+    text-align: left;
+    color: var(--color2);
+    max-width: 75%;
+}
+
+.specialties_page {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide4 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.slide4-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#speciality1 {
+    border-radius: 100%;
+    border: solid 10px var(--color2);
+    width: 35vh;
+    height: 35vh;
+    box-shadow: 5px 5px 10px #444;
+    margin-right: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#speciality2 {
+    border-radius: 100%;
+    border: solid 10px var(--color3);
+    width: 35vh;
+    height: 35vh;
+    box-shadow: 5px 5px 10px #444;
+    margin-right: -10vw;
+    margin-top: -10vh;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+}
+
+#speciality3 {
+    border-radius: 100%;
+    border: solid 10px var(--color4);
+    width: 35vh;
+    height: 35vh;
+    box-shadow: 5px 5px 10px #444;
+    margin-right: 10vw;
+    margin-top: -10vh;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+}
+
+.slide4-2 {
+    background-image: url("./src/specialties_background.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+}
+
+.specialties-text {
+    padding-top: 33%;
+    max-width: 75%;
+}
+
+.specialties-text h2 {
+    color: white;
+}
+
+.download_page {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./src/download_background2.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.slide5 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.slide5-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-android {
+    margin: 0 auto 30px auto;
+    width: 220px;
+    padding: 25px 20px;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.8em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+}
+
+.button-android::before {
+    display: inline-block;
+    background-image: url('./src/googleplay.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    padding: 0 15px;
+    content: '';
+}
+
+.button-android:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.button-ios {
+    margin: 0 auto 30px auto;
+    width: 220px;
+    padding: 25px 20px;
+    background-color: white;
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.8em;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+}
+
+.button-ios::before {
+    display: inline-block;
+    background-image: url('./src/ios2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    padding: 0 15px;
+    content: '';
+}
+
+.button-ios:hover::before {
+    background-image: url('./src/ios.svg');
+    content: '';
+}
+
+.button-ios:hover {
+    background-color: black;
+    color: white;
+}
+
+.slide5-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i-advapp-cel {
+    text-align: center;
+    position: relative;
+}
+
+.i-advapp-cel-screen {
+    width: 350px;
+    height: 600px;
+    margin: auto;
+    background-image: url('./src/appmedpal.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: changeimg2;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changeimg2 {
+    0% {
+        background-image: url("./src/appmedpal.png");
+    }
+    25% {
+        background-image: url("./src/appmedpal.png");
+    }
+    30% {
+        background-image: url("./src/appmedpal2.png");
+    }
+    80% {
+        background-image: url("./src/appmedpal2.png");
+    }
+    85% {
+        background-image: url("./src/appmedpal.png");
+    }
+}
+
+.i-advapp-cel-screen2 {
+    display: block;
+    position: absolute;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 100%;
+    top: 30%;
+    animation-name: changeimg3;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changeimg3 {
+    0% {
+        background-image: url("./src/mplogo.gif");
+    }
+    20% {
+        background-image: url("./src/mplogo.gif");
+    }
+    30% {
+        background-image: unset;
+    }
+    80% {
+        background-image: unset;
+    }
+    100% {
+        background-image: url("./src/mplogo.gif");
+    }
+}
+
+.footer {
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10vh;
+}
+
+#logo_footer {
+    background-image: url("./src/logo_white.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10vh;
+    width: 50%;
+}
+
+.footer h2 {
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.footer h2:hover {
+    color: var(--color2);
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.footer h1 {
+    color: var(--color2);
+    margin-bottom: -10%;
+}
